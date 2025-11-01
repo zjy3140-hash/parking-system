@@ -1,0 +1,211 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  text-align: center;
+  padding-top: 30px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+button {
+  padding: 6px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+input {
+  padding: 6px;
+  margin: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+/* 登录页面样式 */
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#login-container input,
+#login-container button {
+  width: 300px;
+}
+
+#login-container button {
+  margin-top: 20px;
+}
+
+#login-container h1 {
+  margin-bottom: 20px;
+}
+
+#login-container p {
+  font-size: 14px;
+}
+
+/* 图形化管理页面样式 */
+#admin-controls {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#admin-controls input {
+  margin-bottom: 10px;
+}
+
+#admin-controls h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#admin-controls .level,
+#admin-controls .area {
+  margin: 10px;
+  padding: 10px;
+  background-color: #e7f1f8;
+  border-radius: 5px;
+}
+
+#admin-controls .area {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#parking-lot {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.level {
+  margin: 10px;
+  padding: 15px;
+  background-color: #e7f1f8;
+  border-radius: 5px;
+}
+
+.level h4 {
+  font-size: 18px;
+}
+
+.area {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.status {
+  color: green;
+}
+
+.status.occupied {
+  color: red;
+}
+
+#admin-controls button {
+  margin-top: 10px;
+}
+
+/* 输入框和按钮样式 */
+input[type="number"],
+input[type="text"],
+button {
+  width: 200px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  margin-top: 5px;
+}
+
+input[type="number"] {
+  margin-top: 5px;
+}
+
+/* 停车场图形化展示的状态样式 */
+#parking-lot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.level {
+  margin: 10px;
+  padding: 10px;
+  background-color: #e7f1f8;
+  border-radius: 5px;
+}
+
+.area {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.status {
+  color: green;
+}
+
+.status.occupied {
+  color: red;
+}
+
+/* 表单的样式 */
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 250px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px;
+  width: 250px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

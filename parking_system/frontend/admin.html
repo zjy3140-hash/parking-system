@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>停车场管理系统 - 图形化管理</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>🚗 停车场图形化管理系统</h1>
+  <div id="admin-controls">
+    <h3>管理员操作</h3>
+    <div>
+      <h4>添加停车位</h4>
+      <input type="number" id="add-level" placeholder="楼层">
+      <input type="text" id="add-area" placeholder="区域">
+      <input type="number" id="add-space" placeholder="车位号">
+      <button onclick="addParkingSpace()">添加车位</button>
+    </div>
+    <div>
+      <h4>删除停车位</h4>
+      <input type="number" id="delete-level" placeholder="楼层">
+      <input type="text" id="delete-area" placeholder="区域">
+      <input type="number" id="delete-space" placeholder="车位号">
+      <button onclick="deleteParkingSpace()">删除车位</button>
+    </div>
+  </div>
+  <div id="parking-lot">
+    <!-- 停车位信息将在这里加载 -->
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
