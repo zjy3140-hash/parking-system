@@ -6,21 +6,18 @@ from datetime import datetime
 import os, random
 
 app = Flask(__name__, static_folder="../frontend", static_url_path="/")
-app.secret_key = "secret-key"
 CORS(app)
 
-# ---------------- 数据库配置 ----------------
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-    "DATABASE_URL",
-    "mysql+mysqlconnector://root:zjy666@localhost/parking_system"
-).replace("mysql://", "mysql+mysqlconnector://")
+# 获取 DATABASE_URL 环境变量（Railway 会自动设置）
+db_url = os.getenv("DATABASE_URL", "sqlite:///local.db")
 
+app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
 
 with app.app_context():
     init_db(app)
-
 # ---------------- 静态页面 ----------------
 @app.route('/')
 def serve_index():
@@ -133,4 +130,5 @@ def delete_space():
 # ---------------- 启动服务 ----------------
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host='0.0.0.0', port=port)
